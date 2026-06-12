@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustShield AI — Continuous Identity Trust Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="shield-icon">🛡️</span> TrustShield <span class="accent-text">AI</span>
+        </div>
+        <nav>
+            <a href="#core-strategy">Core Strategy</a>
+            <a href="#pipeline-section">Verification Pipeline</a>
+            <a href="#scoring-framework">Scoring Framework</a>
+            <a href="#team-section">Development Team</a>
+            <a href="https://github.com/securestack/trustshield" target="_blank" class="btn-secondary">GitHub Repository</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Trust Beyond Passwords</span>
+            <h1>Continuous Identity<br>Trust Platform.</h1>
+            <p class="hero-subtext">Passwords can be stolen. OTPs intercepted. Devices cloned. But human behavior is nearly impossible to fake. TrustShield AI checks real-time transaction telemetry against the baseline user profile silently stored in your database to eliminate friction for genuine accounts while triggering instant verification cascades for attackers.</p>
+            <div class="hero-actions">
+                <a href="#pipeline-section" class="btn-primary">Run Verification Pipeline</a>
+                <a href="#core-strategy" class="btn-outline">Core Strategy</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glow-ring"></div>
+            <div class="score-display">
+                <div class="huge-score" id="hero-score-val">0%</div>
+                <div class="score-label">Live Trust Score</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="core-strategy" class="problem-section">
+        <div class="section-header">
+            <h2>Baseline Database Verification Strategy</h2>
+            <p>How TrustShield AI leverages historical behavioral profiling to eliminate transactional overhead for consumers while neutralizing malicious exploits.</p>
+        </div>
+
+        <div class="problem-grid">
+            <div class="prob-card emphasis">
+                <h3>The Solution Blueprint</h3>
+                <p class="quote-text">When a genuine user interacts with the application, their typical typing rhythm, physical device hold angles, standard spending velocity parameters, and network context values are calculated and saved safely into an analytical database template. Every subsequent transaction pulls this structural profile from the database to run a comparative verification loop.</p>
+            </div>
+            
+            <div class="prob-card solution-solve">
+                <h3>Eliminating Social Engineering & Account Takeovers</h3>
+                <p>Social engineers can manipulate victims into revealing passwords or OTPs, but they cannot force them to replicate their natural device handling telemetry or baseline pacing. When a profile changes hands to an external attacker, the physical interactions deviate radically from the stored database archetype. The system identifies this mismatch instantly, freezing transfers before funds can leave the core architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pipeline-section" class="pipeline-area">
+        <div class="section-header">
+            <h2>5-Layer DB Comparison Pipeline</h2>
+            <p>Trigger a simulated payload execution below to watch the framework run transactional inputs side-by-side against historical template signatures stored in the database.</p>
+            
+            <div class="pipeline-controls">
+                <button class="btn-primary" onclick="verifyPipeline('GENUINE')">Verify Genuine Session (No OTP/2FA)</button>
+                <button class="btn-primary btn-alert-trigger" onclick="verifyPipeline('FRAUD')">Intercept Compromised Session (Trigger Friction)</button>
+            </div>
+        </div>
+
+        <div class="pipeline-container">
+            <div class="pipeline-nodes">
+                <div class="pipe-node" id="node-l1">
+                    <div class="node-badge">Layer 1</div>
+                    <h4>Behavior Biometrics</h4>
+                    <p class="node-desc">Cross-checks real-time keystroke speed and navigation timing profiles against the saved user database profile.</p>
+                    <span class="node-status" id="status-l1">Awaiting Session...</span>
+                </div>
+                
+                <div class="pipe-arrow">➔</div>
+
+                <div class="pipe-node" id="node-l2">
+                    <div class="node-badge">Layer 2</div>
+                    <h4>Device Hardware Matrix</h4>
+                    <p class="node-desc">Matches incoming gyroscope tilt configurations and physical screen swipe grip profiles against historical records.</p>
+                    <span class="node-status" id="status-l2">Awaiting Session...</span>
+                </div>
+
+                <div class="pipe-arrow">➔</div>
+
+                <div class="pipe-node" id="node-l3">
+                    <div class="node-badge">Layer 3</div>
+                    <h4>Transaction Pattern Al</h4>
+                    <p class="node-desc">Computes the transaction magnitude against stored user limits to detect uncharacteristic asset movement spikes.</p>
+                    <span class="node-status" id="status-l3">Awaiting Session...</span>
+                </div>
+
+                <div class="pipe-arrow">➔</div>
+
+                <div class="pipe-node" id="node-l4">
+                    <div class="node-badge">Layer 4</div>
+                    <h4>Network Anomaly Engine</h4>
+                    <p class="node-desc">Flags suspicious proxy networks, sudden geographic velocity shifts, or unverified routing relays.</p>
+                    <span class="node-status" id="status-l4">Awaiting Session...</span>
+                </div>
+
+                <div class="pipe-arrow">➔</div>
+
+                <div class="pipe-node" id="node-l5">
+                    <div class="node-badge">Layer 5</div>
+                    <h4>Insider Threat Control</h4>
+                    <p class="node-desc">Flags out-of-character execution brackets, bulk metrics exports, and unauthorized record lookup threads.</p>
+                    <span class="node-status" id="status-l5">Awaiting Session...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-alert-banner" id="pipeline-banner-output" style="display: none;">
+            <h3 id="banner-action-title">Pipeline Analysis Stable</h3>
+            <p id="banner-action-desc">Awaiting initialization instructions.</p>
+        </div>
+    </section>
+
+    <section id="scoring-framework" class="scoring-section">
+        <div class="section-header">
+            <h2>The Scoring & Enforcement Engine</h2>
+            <p>Individual layer points accumulate into a composite total trust score. Action routing paths depend on where that total falls on the trust spectrum.</p>
+        </div>
+
+        <div class="score-tables-container">
+            <table class="scoring-table">
+                <thead>
+                    <tr>
+                        <th>Total Accumulated Score</th>
+                        <th>Risk Assessment State</th>
+                        <th>Automated Enforcement Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-allow">
+                        <td><strong>75 – 100 Points</strong></td>
+                        <td>High Trust / Confirmed Genuine Context</td>
+                        <td><strong>ALLOW:</strong> Frictionless processing routed directly to execution engines. Zero OTP/2FA overhead.</td>
+                    </tr>
+                    <tr class="row-stepup">
+                        <td><strong>50 – 74 Points</strong></td>
+                        <td>Moderate Risk / Mismatched Metrics</td>
+                        <td><strong>STEP-UP CHALLENGE:</strong> Demands mandatory out-of-band biometric/FaceID validation wrapper.</td>
+                    </tr>
+                    <tr class="row-block">
+                        <td><strong>30 – 49 Points</strong></td>
+                        <td>High Suspicion Flag Issued</td>
+                        <td><strong>BLOCK:</strong> Intercepts transaction instantly, dropping execution thread prior to engine processing.</td>
+                    </tr>
+                    <tr class="row-freeze">
+                        <td><strong>0 – 29 Points</strong></td>
+                        <td>Critical Anomaly / Attacker Confirmed</td>
+                        <td><strong>FREEZE ACCOUNT:</strong> Shuts down current session state, locks liquidity assets, and flags administrative endpoints.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="team-section" class="team-section-area">
+        <div class="section-header">
+            <h2>The Technical Framework Architects</h2>
+            <p>Team SecureStack — Elite engineering group driving enterprise security platform architecture.</p>
+        </div>
+        
+        <div class="team-row-container">
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="user.jpeg" alt="Lead AI Engineer Card Profile" class="team-avatar">
+                    <div class="skills-overlay">
+                        <h4>Core Expertise</h4>
+                        <p>Python, TensorFlow, Database Architecture, Biometric Modeling</p>
+                    </div>
+                </div>
+                <h3>Jayesh Patel</h3>
+                <p class="team-role">Lead AI Engineer</p>
+                <div class="team-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="user.jpeg" alt="Security Infrastructure Engineer Profile" class="team-avatar">
+                    <div class="skills-overlay">
+                        <h4>Core Expertise</h4>
+                        <p>Cyber Security, Ledger Protection, Network Analytics, Cryptography</p>
+                    </div>
+                </div>
+                <h3>Aarav Shah</h3>
+                <p class="team-role">Security Architect</p>
+                <div class="team-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="user.jpeg" alt="Pipeline Systems Developer Profile" class="team-avatar">
+                    <div class="skills-overlay">
+                        <h4>Core Expertise</h4>
+                        <p>Node.js, PostgreSQL Integration, Low-Latency Optimization, API Design</p>
+                    </div>
+                </div>
+                <h3>Ananya Iyer</h3>
+                <p class="team-role">Backend Engineer</p>
+                <div class="team-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="user.jpeg" alt="UI UX Interaction Specialist Profile" class="team-avatar">
+                    <div class="skills-overlay">
+                        <h4>Core Expertise</h4>
+                        <p>HTML5, CSS Grid/Animations, JS Performance Optimization, UI Engineering</p>
+                    </div>
+                </div>
+                <h3>Rohan Mehta</h3>
+                <p class="team-role">UI/UX Engineer</p>
+                <div class="team-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Team SecureStack — Production Submission Blueprint for Enterprise Threat Mitigation Layers.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
